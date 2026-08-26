@@ -1,0 +1,2098 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R3_OC_Transportation_Plan_BRIEF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* ============================================================
+   Okanagan College Sustainability Plan
+   Organizational Structure and Funding, director brief
+   Brand: Cherry E10054, Cabernet 782434, Charcoal 50534C,
+          Lake 005F63, Sunset FF8204
+   Type:  Poppins (display), Noto Serif (body)
+   ============================================================ */
+
+:root {
+  --cherry: #E10054;
+  --cabernet: #782434;
+  --charcoal: #50534C;
+  --lake: #005F63;
+  --sunset: #FF8204;
+  --sky: #2ECDDC;
+
+  --bg: #FFFFFF;
+  --surface: #F7F6F4;
+  --surface-2: #EFEDE9;
+  --line: #DAD7D1;
+  --line-soft: #E8E5E0;
+  --ink: #33352F;
+  --ink-2: #50534C;
+  --ink-3: #7A7C74;
+  --accent: #E10054;
+  --accent-ink: #782434;
+  --on-accent: #FFFFFF;
+  --hero-bg: #782434;
+  --hero-ink: #FFFFFF;
+  --hero-ink-2: #E9D7DA;
+  --chip-bg: #EFEDE9;
+  --chip-ink: #50534C;
+  --ok: #005F63;
+  --warn: #A8531F;
+  --rec-bg: rgba(225,0,84,.045);
+  --badge-bg: rgba(225,79,61,.13);
+  --badge-ink: #782434;
+  --shadow: 0 1px 2px rgba(51,53,47,.06), 0 8px 24px rgba(51,53,47,.06);
+  --radius: 10px;
+  --maxw: 1180px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #171915;
+    --surface: #1F221D;
+    --surface-2: #262A24;
+    --line: #3A3E36;
+    --line-soft: #2C302A;
+    --ink: #EAE7E1;
+    --ink-2: #C6C3BC;
+    --ink-3: #94918A;
+    --accent: #E10054;
+    --accent-ink: #FF8204;
+    --on-accent: #FFFFFF;
+    --hero-bg: #2A1418;
+    --hero-ink: #FFFFFF;
+    --hero-ink-2: #D9B9BE;
+    --chip-bg: #262A24;
+    --chip-ink: #C6C3BC;
+    --ok: #2ECDDC;
+    --warn: #FF8204;
+    --rec-bg: rgba(255,130,4,.06);
+    --badge-bg: rgba(255,130,4,.14);
+    --badge-ink: #FF8204;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #171915;
+  --surface: #1F221D;
+  --surface-2: #262A24;
+  --line: #3A3E36;
+  --line-soft: #2C302A;
+  --ink: #EAE7E1;
+  --ink-2: #C6C3BC;
+  --ink-3: #94918A;
+  --accent: #E10054;
+  --accent-ink: #FF8204;
+  --on-accent: #FFFFFF;
+  --hero-bg: #2A1418;
+  --hero-ink: #FFFFFF;
+  --hero-ink-2: #D9B9BE;
+  --chip-bg: #262A24;
+  --chip-ink: #C6C3BC;
+  --ok: #2ECDDC;
+  --warn: #FF8204;
+  --rec-bg: rgba(255,130,4,.06);
+  --badge-bg: rgba(255,130,4,.14);
+  --badge-ink: #FF8204;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Noto Serif", Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .disp, .num, th, .chip, .btn, .tag, .kicker {
+  font-family: "Poppins", "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+/* ---------- masthead ---------- */
+
+.masthead { background: var(--bg); border-bottom: 1px solid var(--line); }
+.mast-top { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 26px 0 20px; }
+.logo { height: 40px; width: auto; display: block; }
+.logo-light { display: block; }
+.logo-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .logo-light { display: none; }
+  :root:not([data-theme="light"]) .logo-dark { display: block; }
+}
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }
+:root[data-theme="light"] .logo-light { display: block; }
+:root[data-theme="light"] .logo-dark { display: none; }
+
+.btn {
+  background: transparent; color: var(--ink-3);
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 7px 15px; font-size: 11px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; cursor: pointer;
+}
+.btn:hover { border-color: var(--accent); color: var(--accent-ink); }
+
+.badge {
+  display: inline-block; background: var(--badge-bg); color: var(--badge-ink);
+  font-family: "Poppins", sans-serif; font-size: 10.5px; font-weight: 600;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 7px 13px; border-radius: 5px; margin: 0 0 22px;
+}
+
+.mast-grid {
+  display: grid; grid-template-columns: 1.5fr 1fr;
+  gap: 34px; align-items: start; padding-bottom: 34px;
+}
+h1 {
+  font-size: clamp(32px, 5vw, 54px); line-height: 1.03;
+  font-weight: 600; margin: 0 0 16px; letter-spacing: -.02em;
+}
+h1 .l1 { display: block; color: var(--ink); }
+h1 .l2 { display: block; color: var(--accent); }
+.mast-sub { font-size: 16px; color: var(--ink-2); margin: 0; }
+.mast-sub em { font-style: normal; color: var(--accent-ink); }
+
+.mast-meta { margin: 6px 0 0; text-align: right; }
+.mast-meta > div { margin-bottom: 7px; font-size: 13px; line-height: 1.45; }
+.mast-meta dt {
+  display: inline; font-family: "Poppins", sans-serif; font-weight: 600;
+  font-size: 12px; color: var(--ink); margin-right: 6px;
+}
+.mast-meta dd { display: inline; margin: 0; color: var(--ink-3); }
+
+/* ---------- sections ---------- */
+
+section { padding: 52px 0; border-bottom: 1px solid var(--line-soft); }
+section:last-of-type { border-bottom: 0; }
+h2 {
+  font-size: clamp(22px, 2.4vw, 29px); font-weight: 600;
+  margin: 0 0 6px; letter-spacing: -.01em;
+}
+.sub {
+  color: var(--ink-3); font-size: 15px; margin: 0 0 26px; max-width: 74ch;
+}
+h3 {
+  font-size: 17px; font-weight: 600; margin: 30px 0 10px;
+  letter-spacing: -.005em;
+}
+p { margin: 0 0 14px; }
+.lead { font-size: 17.5px; }
+
+/* ---------- figures ---------- */
+
+.figs {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 14px; margin: 0;
+}
+.thesis {
+  font-size: clamp(17px, 1.7vw, 20px); color: var(--ink);
+  max-width: 76ch; margin: 0 0 26px;
+}
+.fig {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-radius: var(--radius); padding: 20px 20px 18px;
+  display: flex; flex-direction: column;
+}
+.fig.hero { background: var(--hero-bg); border-color: var(--hero-bg); }
+.fig .num {
+  font-size: clamp(30px, 3.6vw, 40px); font-weight: 600; line-height: 1;
+  color: var(--accent-ink); letter-spacing: -.02em;
+}
+.fig.hero .num { color: var(--hero-ink); }
+.fig .unit { font-size: .5em; font-weight: 500; margin-left: 3px; }
+.fig .lbl {
+  font-family: "Poppins", sans-serif; font-size: 13.5px; font-weight: 600;
+  margin: 10px 0 5px; color: var(--ink);
+}
+.fig.hero .lbl { color: var(--hero-ink); }
+.fig .sub2 { font-size: 13px; color: var(--ink-3); margin: 0; line-height: 1.5; }
+.fig.hero .sub2 { color: var(--hero-ink-2); }
+
+/* ---------- locator band ---------- */
+
+#locator { background: var(--surface); border-top: 1px solid var(--line-soft); }
+.loc-kicker {
+  font-family: "Poppins", sans-serif; font-size: 10.5px; font-weight: 600;
+  letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3);
+  margin: 0 0 22px;
+}
+.locator { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.loc-col { border-top: 2px solid var(--line); padding-top: 12px; }
+.loc-col.active { border-top-color: var(--accent); }
+.loc-col h4 {
+  font-family: "Poppins", sans-serif; font-size: 14px; font-weight: 600;
+  margin: 0 0 12px; color: var(--ink);
+}
+.loc-col.active h4 { color: var(--accent); }
+.loc-item { font-size: 13.5px; color: var(--ink-3); margin-bottom: 7px; line-height: 1.4; }
+.loc-item.on { color: var(--ink); font-weight: 600; font-family: "Poppins", sans-serif; font-size: 13px; }
+.loc-item.on i { font-style: normal; color: var(--accent); font-weight: 500; }
+.loc-item.done i { font-style: normal; color: var(--ok); font-size: 11.5px; }
+
+/* ---------- the date rail ---------- */
+
+.rail { position: relative; display: grid; grid-template-columns: repeat(5, 1fr); padding-top: 46px; }
+.rail-band {
+  position: absolute; top: 0; left: 20%; width: 60%; height: 46px;
+  border: 1px dashed var(--accent); border-bottom: 0; border-radius: 7px 7px 0 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.rail-band span {
+  background: var(--bg); padding: 0 12px; color: var(--accent-ink);
+  font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: .11em; text-transform: uppercase;
+}
+.rail-line { position: absolute; top: 45px; left: 0; right: 0; height: 2px; background: var(--line); }
+.rail-node { text-align: center; padding: 0 12px; position: relative; }
+.rail-node .dot {
+  position: absolute; top: -7px; left: 50%; transform: translateX(-50%);
+  width: 14px; height: 14px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--line);
+}
+.rail-node.hot .dot { border-color: var(--accent); background: var(--accent); }
+.rail-node .d {
+  margin-top: 22px; font-family: "Poppins", sans-serif;
+  font-weight: 600; font-size: 14.5px; color: var(--ink);
+}
+.rail-node.hot .d { color: var(--accent-ink); }
+.rail-node .w { font-size: 13px; color: var(--ink-3); margin: 5px 0 0; line-height: 1.45; }
+
+/* ---------- two column ---------- */
+
+.cols { display: grid; grid-template-columns: 1.62fr 1fr; gap: 34px; align-items: start; }
+.aside {
+  background: var(--surface); border: 1px solid var(--line-soft);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 22px;
+}
+.aside h3 { margin-top: 0; font-size: 15px; }
+.aside p { font-size: 14.5px; color: var(--ink-2); }
+.aside p:last-child { margin-bottom: 0; }
+
+/* ---------- tables ---------- */
+
+.tw { overflow-x: auto; margin: 18px 0 0; }
+table {
+  width: 100%; border-collapse: collapse; font-size: 14px;
+  table-layout: fixed;
+}
+th {
+  text-align: left; font-size: 11px; font-weight: 600;
+  letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3);
+  padding: 0 12px 9px; border-bottom: 1.5px solid var(--line);
+  vertical-align: bottom;
+}
+td {
+  padding: 11px 12px; border-bottom: 1px solid var(--line-soft);
+  vertical-align: middle; color: var(--ink-2);
+}
+td.prose { vertical-align: top; }
+.t-top td { vertical-align: top; }
+.t-top td.strong2 { color: var(--ink); font-weight: 500; }
+th.c, td.c { text-align: center; }
+td.nw { white-space: nowrap; }
+td.strong { color: var(--ink); font-weight: 500; font-family: "Poppins", sans-serif; font-size: 13px; }
+tr:last-child td { border-bottom: 0; }
+caption {
+  caption-side: bottom; text-align: left; font-size: 12.5px;
+  color: var(--ink-3); padding-top: 12px; line-height: 1.5;
+}
+
+/* ---------- chips and tags ---------- */
+
+.chip {
+  display: inline-block; background: var(--chip-bg); color: var(--chip-ink);
+  border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600;
+  letter-spacing: .04em;
+}
+.chip.na { background: transparent; border: 1px dashed var(--line); color: var(--ink-3); }
+.chip.go { background: var(--accent); color: var(--on-accent); }
+.tag {
+  display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .09em;
+  text-transform: uppercase; color: var(--ink-3);
+  border: 1px solid var(--line); border-radius: 4px; padding: 2px 6px;
+}
+
+/* ---------- target ---------- */
+
+.targets { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.tcard {
+  border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 22px 24px; background: var(--surface);
+}
+.tcard .tag { margin-bottom: 12px; }
+.tcard .stmt {
+  font-size: 17px; color: var(--ink); line-height: 1.5; margin: 0 0 14px;
+  font-weight: 500;
+}
+.tcard .base {
+  font-size: 13.5px; color: var(--ink-3); border-top: 1px solid var(--line-soft);
+  padding-top: 12px; margin: 0;
+}
+.tcard .base b { color: var(--accent-ink); font-family: "Poppins", sans-serif; font-size: 13px; }
+
+/* ---------- tiers ---------- */
+
+.tierframe {
+  background: var(--surface-2); border-radius: var(--radius);
+  padding: 18px 22px; font-size: 16px; color: var(--ink);
+  margin: 0 0 22px; border-left: 3px solid var(--accent);
+}
+/* ---------- tier columns ---------- */
+
+#tierTable table { table-layout: fixed; }
+.tier-h { padding: 0 18px 18px !important; vertical-align: top; border-bottom: 2px solid var(--line) !important; }
+.tier-h.recd { border-top: 3px solid var(--accent); background: var(--rec-bg); }
+.tier-h .tno {
+  display: block; font-family: "Poppins", sans-serif; font-weight: 600;
+  font-size: 28px; letter-spacing: -.02em; color: var(--ink);
+  text-transform: none; margin-top: 16px;
+}
+.tier-h.recd .tno { color: var(--accent); }
+.tier-h .tname {
+  display: block; font-size: 10.5px; font-weight: 600; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-3); margin: 7px 0 9px;
+}
+.tier-h.recd .tname { color: var(--accent); }
+.tier-h .tsub {
+  display: block; font-family: "Noto Serif", Georgia, serif; font-size: 14px;
+  font-weight: 600; color: var(--ink); text-transform: none;
+  letter-spacing: 0; line-height: 1.4;
+}
+td.tier-c { padding: 16px 18px; vertical-align: top; }
+td.tier-c.recd { background: var(--rec-bg); }
+td.tier-lbl {
+  padding: 16px 16px 16px 0; vertical-align: top;
+  font-family: "Poppins", sans-serif; font-size: 11px; font-weight: 600;
+  letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3);
+}
+td.tier-c ul { margin: 0; padding-left: 17px; }
+td.tier-c li { margin-bottom: 5px; }
+td.tier-c li:last-child { margin-bottom: 0; }
+
+/* ---------- years ---------- */
+
+.ytabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.ytab {
+  font-family: "Poppins", sans-serif; font-size: 12.5px; font-weight: 500;
+  background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; padding: 8px 15px; cursor: pointer; color: var(--ink-2);
+}
+.ytab.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); font-weight: 600; }
+.ytab .st { display: inline-block; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); margin-left: 7px; vertical-align: 1px; }
+.ytab.on .st { background: var(--on-accent); }
+
+.ypanel { display: none; }
+.ypanel.on { display: block; }
+.yhead {
+  display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: baseline;
+  padding-bottom: 14px; border-bottom: 1px solid var(--line);
+  margin-bottom: 6px;
+}
+.yhead .yt { font-family: "Poppins", sans-serif; font-size: 20px; font-weight: 600; color: var(--ink); }
+.yhead .ym { font-size: 13px; color: var(--ink-3); }
+.youtcome {
+  font-size: 16.5px; color: var(--ink); margin: 16px 0 4px; max-width: 82ch;
+}
+.youtcome b { color: var(--accent-ink); font-weight: 600; }
+
+/* ---------- asks ---------- */
+
+.asks { counter-reset: a; }
+.ask {
+  display: grid; grid-template-columns: 42px 1fr; gap: 16px;
+  padding: 18px 0; border-bottom: 1px solid var(--line-soft);
+}
+.ask:last-child { border-bottom: 0; }
+.ask::before {
+  counter-increment: a; content: counter(a);
+  font-family: "Poppins", sans-serif; font-size: 19px; font-weight: 600;
+  color: var(--accent); line-height: 1.2;
+}
+.ask h4 { font-family: "Poppins", sans-serif; font-size: 15.5px; font-weight: 600; margin: 0 0 5px; color: var(--ink); }
+.ask p { margin: 0; font-size: 14.5px; color: var(--ink-2); }
+
+/* ---------- footer ---------- */
+
+.foot {
+  background: var(--surface); border-top: 1px solid var(--line);
+  padding: 30px 0 44px; font-size: 13px; color: var(--ink-3);
+}
+.foot p { max-width: 96ch; }
+.foot b { color: var(--ink-2); }
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 980px) {
+  .figs { grid-template-columns: repeat(2, 1fr); }
+  .locator { grid-template-columns: repeat(2, 1fr); }
+  .mast-grid { grid-template-columns: 1fr; gap: 22px; }
+  .mast-meta { text-align: left; }
+  .cols { grid-template-columns: 1fr; }
+  .targets { grid-template-columns: 1fr; }
+}
+@media (max-width: 700px) {
+  .rail { grid-template-columns: 1fr; padding-top: 0; }
+  .rail-band, .rail-line { display: none; }
+  .rail-node { text-align: left; padding: 12px 0 12px 16px; border-left: 2px solid var(--line); }
+  .rail-node.hot { border-left-color: var(--accent); }
+  .rail-node .dot { top: 16px; left: -8px; transform: none; }
+  .rail-node .d { margin-top: 0; }
+}
+@media (max-width: 620px) {
+  .wrap { padding: 0 18px; }
+  .figs { grid-template-columns: 1fr; }
+  .locator { grid-template-columns: 1fr; gap: 20px; }
+}
+
+html{-webkit-text-size-adjust:100%}
+.cchip{display:inline-block;border-radius:999px;padding:2px 8px;font-family:"Poppins",sans-serif;font-size:10.5px;font-weight:600;letter-spacing:.03em;white-space:nowrap}
+.cchip.measure{background:var(--chip-bg);color:var(--ok)}
+.cchip.abate{background:var(--badge-bg);color:var(--badge-ink)}
+.cchip.enable{background:var(--chip-bg);color:var(--ink-3)}
+.chip.open{background:var(--badge-bg);color:var(--badge-ink)}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="mast-top">
+      <img class="logo logo-light" src="data:image/png;base64,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" alt="Okanagan College">
+      <img class="logo logo-dark" src="data:image/png;base64,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" alt="Okanagan College">
+      <button class="btn" id="themeBtn" type="button">Theme</button>
+    </div>
+    <span class="badge">Brief for review &middot; not approved</span>
+    <div class="mast-grid">
+      <div>
+        <h1><span class="l1">Transportation</span><span class="l2">Six year brief</span></h1>
+        <p class="mast-sub">Okanagan College Sustainability Plan &middot; <em>Operations</em> &middot; FY2026/27 to FY2031/32</p>
+      </div>
+      <dl class="mast-meta">
+        <div><dt>Framework</dt><dd>20260825 R1 Sust Plan Framework.xlsx, column P</dd></div>
+        <div><dt>Impact area</dt><dd>Transportation &middot; 1 of 13</dd></div>
+        <div><dt>STARS ladder</dt><dd>Silver at the Nov 2028 submission &middot; Gold at Nov 2032</dd></div>
+        <div><dt>Prepared</dt><dd>26 August 2026</dd></div>
+      </dl>
+    </div>
+  </div>
+</header>
+
+<section id="figures">
+  <div class="wrap">
+    <h2>Where this stands today</h2>
+    <p class="thesis">Transportation is the only one of the thirteen impact areas that rests on measured data. What it does not yet have is a tonnage, and that is what the first year of this plan is built to produce.</p>
+    <p class="sub">Every figure below is drawn from Okanagan College's own records or from a named peer source. Nothing here is estimated.</p>
+    <div class="figs" id="figs"></div>
+  </div>
+</section>
+
+<section id="rail">
+  <div class="wrap">
+    <h2>The autumn that decides the first submission</h2>
+    <p class="sub">Three fixed dates fall inside about ten weeks. The tonnage lands, the transit exchange completes, and the first submission built on measured data goes in.</p>
+    <div id="railWrap"></div>
+  </div>
+</section>
+
+<section id="locator">
+  <div class="wrap">
+    <p class="loc-kicker">Where this sits in the plan</p>
+    <div class="locator" id="locatorGrid"></div>
+  </div>
+</section>
+
+<section id="situation">
+  <div class="wrap">
+    <h2>The situation</h2>
+    <div class="cols">
+      <div id="situation-text"></div>
+      <div class="aside">
+        <h3>Where the peers stand</h3>
+        <div id="peer-text"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="case">
+  <div class="wrap">
+    <h2>Why this plan is a carbon plan</h2>
+    <p class="thesis" id="carbonHeadline"></p>
+    <p class="sub">Mode share is what we can measure and move now. Tonnes are what we are actually buying. The chain between the two is short and it is worth stating plainly.</p>
+    <div id="chain"></div>
+
+    <h3>Where transportation sits in Okanagan College's footprint</h3>
+    <div class="tw" id="scopeTable"></div>
+
+    <h3>Four things that are true, and worth saying out loud</h3>
+    <div class="asks" id="truths"></div>
+
+    <h3>So why pivot the plan on carbon</h3>
+    <p class="sub" id="whyLede"></p>
+    <div class="asks" id="whyPoints"></div>
+
+    <h3>The levers, re-ranked on carbon effect</h3>
+    <div class="tw" id="leverTable"></div>
+    <div class="tierframe" id="leverFrame"></div>
+
+    <h3>How a mode shift becomes a defensible tonne</h3>
+    <p id="methodStd"></p>
+    <div class="asks" id="methodList"></div>
+    <div class="tierframe" id="sanityNote"></div>
+
+    <h3>The STARS position, verified against the 3.0.1 manual</h3>
+    <div class="tw" id="starsTable"></div>
+
+    <h3>How to read the carbon tag on every activity</h3>
+    <div class="tw" id="tagTable"></div>
+  </div>
+</section>
+
+<section id="target">
+  <div class="wrap">
+    <h2>The target, stated twice</h2>
+    <p class="sub">One outcome and one lever, as every module in this plan carries. The lever has a measured baseline. The outcome does not have one yet, and the percentage is deliberately left blank until it does.</p>
+    <div class="targets" id="targets"></div>
+  </div>
+</section>
+
+<section id="tiers">
+  <div class="wrap">
+    <h2>Three ways to get there, differing in what they depend on</h2>
+    <div class="tierframe" id="tierFrame"></div>
+    <div class="tw" id="tierTable"></div>
+  </div>
+</section>
+
+<section id="roadmap">
+  <div class="wrap">
+    <h2>Six years, activity by activity</h2>
+    <p class="sub">Full wording, accountable positions and timing bands live in the detailed plan. Labels here are deliberately short. Every activity carries a GHG scope and whether it measures, abates or enables.</p>
+    <div class="ytabs" id="ytabs"></div>
+    <div id="ypanels"></div>
+  </div>
+</section>
+
+<section id="asks">
+  <div class="wrap">
+    <h2>The decisions we need</h2>
+    <p class="sub">Four of the six cost nothing beyond a decision. The two that do not are the accessibility closures and, eventually, the charging expansion.</p>
+    <div class="asks" id="asksList"></div>
+  </div>
+</section>
+
+<section id="open">
+  <div class="wrap">
+    <h2>Open questions, with owners</h2>
+    <p class="sub">Nothing on this list has been filled with an estimate. Where the answer is not known, the question is carried rather than resolved. Four of the plan's original open questions were closed by the transportation data and three sharper ones were created by it.</p>
+    <div class="tw" id="openTable"></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap"><p id="footNote"></p></div>
+</footer>
+
+<script>
+
+"use strict";
+/* ============================================================
+   DATA CONTRACT
+   OC_PLAN.framework is plan level and identical across all 13
+   module briefs. OC_PLAN.modules is an array; this file ships one.
+   The master plan is assembled by replacing modules with all 13
+   and moving tierOptions, tierFrame and rail inside each module.
+   Layout ported from the Organizational Structure and Funding
+   brief, 2026-08-26. Content unchanged.
+   ============================================================ */
+var OC_PLAN = {
+ "framework": {
+  "plan": "Okanagan College Sustainability Plan",
+  "frameworkFile": "20260825 R1 Sust Plan Framework.xlsx, column P",
+  "horizon": "FY2026/27 to FY2031/32",
+  "starsLadder": "Silver at the Nov 2028 submission · Gold at Nov 2032",
+  "focusAreas": [
+   {
+    "name": "Planning and Administration",
+    "impactAreas": [
+     "Policy / Planning",
+     "Organizational Structure & Funding",
+     "Equity & Well Being"
+    ]
+   },
+   {
+    "name": "Engagement",
+    "impactAreas": [
+     "Training",
+     "Performance Measurement",
+     "Communications"
+    ]
+   },
+   {
+    "name": "Operations",
+    "impactAreas": [
+     "UNSDG's",
+     "Infrastructure (Energy/Water)",
+     "Supply Chain",
+     "Transportation",
+     "Carbon Zero"
+    ]
+   },
+   {
+    "name": "Academics",
+    "impactAreas": [
+     "Curriculum",
+     "Applied Research"
+    ]
+   }
+  ],
+  "years": [
+   {
+    "id": "Y1",
+    "fy": "FY2026/27",
+    "span": "Apr 1 2026 to Mar 31 2027",
+    "period": "Operational period 1",
+    "milestone": "November 2026, submit the STARS report for the 2025/26 performance period",
+    "submits": true
+   },
+   {
+    "id": "Y2",
+    "fy": "FY2027/28",
+    "span": "Apr 1 2027 to Mar 31 2028",
+    "period": "Operational period 1",
+    "milestone": "2027/28 STARS performance period, a data collection year",
+    "submits": false
+   },
+   {
+    "id": "Y3",
+    "fy": "FY2028/29",
+    "span": "Apr 1 2028 to Mar 31 2029",
+    "period": "Operational period 2",
+    "milestone": "November 2028, submit for 2027/28. Silver target",
+    "submits": true
+   },
+   {
+    "id": "Y4",
+    "fy": "FY2029/30",
+    "span": "Apr 1 2029 to Mar 31 2030",
+    "period": "Operational period 2",
+    "milestone": "2029/30 STARS performance period, a data collection year",
+    "submits": false
+   },
+   {
+    "id": "Y5",
+    "fy": "FY2030/31",
+    "span": "Apr 1 2030 to Mar 31 2031",
+    "period": "Operational period 3",
+    "milestone": "November 2030, submit for 2029/30",
+    "submits": true
+   },
+   {
+    "id": "Y6",
+    "fy": "FY2031/32",
+    "span": "Apr 1 2031 to Mar 31 2032",
+    "period": "Operational period 3",
+    "milestone": "2031/32 performance period, feeding the November 2032 Gold submission",
+    "submits": false
+   }
+  ]
+ },
+ "modules": [
+  {
+   "impactArea": "Transportation",
+   "focusArea": "Operations",
+   "desiredOutcome": "Modal Splits Optimized and aligned with sustainability guidelines and carbon planning targets",
+   "goal": "Most people arriving at an OC campus get there without driving alone, and the ones who cannot drive are not the ones penalized.",
+   "figures": [
+    {
+     "n": "Sept",
+     "unit": " 2026",
+     "label": "OC's first measured commuting tCO₂e",
+     "sub": "Urban Systems workplan, Task 2 · nothing to report before it",
+     "hero": true
+    },
+    {
+     "n": "45",
+     "unit": "%",
+     "label": "Mode-share target for 2032, from 33% measured",
+     "sub": "The lever, not the goal",
+     "hero": true
+    },
+    {
+     "n": "32",
+     "unit": "×",
+     "label": "Commuting vs whole fleet, at UBC",
+     "sub": "35,114 tCO₂e against 1,093. Why this plan does not lead with EVs"
+    },
+    {
+     "n": "1.97",
+     "unit": " / 6",
+     "label": "STARS OP14 today",
+     "sub": "4.03 points unclaimed in this credit alone"
+    },
+    {
+     "n": "$0",
+     "unit": "",
+     "label": "BC carbon tax since 1 April 2025",
+     "sub": "No price signal · the case rests elsewhere"
+    },
+    {
+     "n": "~$13",
+     "unit": "k/yr",
+     "label": "Charging revenue not yet collected",
+     "sub": "BC Low Carbon Fuel Standard credits"
+    }
+   ],
+   "situation": [
+    "Transportation is the only one of the thirteen impact areas that rests on measured data. Driving alone is the majority mode at every campus, from 60% at Kelowna to 73% at Vernon. Transit carries 13% at Kelowna and 1% at Salmon Arm.",
+    "The barrier data tells us what to do about it. People who would use transit more cite journey time (26%) and unreliable frequency (25%); only 10% cite the fare. People who would carpool mostly say they do not know anyone to carpool with (26%), and 32% would prefer to carpool against the 6% who actually do. We already own the platform that solves a matching problem.",
+    "So the plan leads with what is free and already in our hands, prices parking deliberately for the first time, and treats the U-Pass as a service conversation with BC Transit rather than a discount.",
+    "What the plan is buying with all of that is a tonnage reduction. Commuting is the largest transportation emission source at every institution that has measured it, and Okanagan College has never measured its own. The first figure arrives around September 2026. Everything from Year 1 onward is built to produce that number, then reduce it."
+   ],
+   "peerLine": [
+    "The comparator set is six BC institutions: TRU, Camosun, College of the Rockies, Douglas, Langara and Vancouver Community College. On transportation the pattern is the opposite of most impact areas. They have very little, and what they have is thinner than ours.",
+    "Douglas College reached STARS Silver at 46.21 and Langara at 51.63. <b>Both pursued only one of the three transportation credits.<\/b> Both ratings have since expired. Camosun, our closest structural peer, has held no current rating since 2018 and its 2018 plan states a single occupancy vehicle share of 48 per cent from an April 2018 count whose sample size it never discloses.",
+    "TRU publishes no mode share target and no fleet target of any kind. Its 2025 Campus Master Plan Refresh plans parking to grow above 2,481 stalls. Its FleetCarma EV suitability study turns out to be a January 2013 vendor deck whose entire comparator catalogue is obsolete, with no traceable follow through.",
+    "Langara earns roughly <b>$30,000 a year<\/b> in BC Low Carbon Fuel Standard credits across 46 charging stations, and projects a further $70,000 to $100,000 under the federal Clean Fuel Regulations that it has not yet collected. That is the one thing in the set worth copying immediately.",
+    "No BC peer publishes a mode share target with a baseline year, and none resolves the OP 13 boundary question for low speed electric vehicles. Okanagan College's 33 per cent on 4,280 counted person trips is already more rigorous than anything they have published. This is not where we are catching up."
+   ],
+   "carbonHeadline": "Mode share is the lever. Tonnes are the outcome. This plan is built to produce Okanagan College's first measured commuting emissions figure, then reduce it.",
+   "chain": [
+    {
+     "step": "A measured commuting tonnage",
+     "then": "turns a mode share percentage into a number in tCO₂e that Finance and the Board can act on"
+    },
+    {
+     "step": "A published distance assumption, held constant",
+     "then": "makes any future reduction attributable to a real mode shift rather than to a change of method"
+    },
+    {
+     "step": "A mode shift matrix",
+     "then": "lets every lever be ranked on carbon effect instead of on how easy it is to pull"
+    },
+    {
+     "step": "Trips that never happen at all",
+     "then": "removes 100 per cent of a trip's emissions, which no mode shift achieves"
+    },
+    {
+     "step": "A fleet that electrifies on replacement cycles",
+     "then": "moves Scope 1, which is 3 per cent of operations emissions at UBC and 0.2 per cent of total at Langara"
+    }
+   ],
+   "scopeTable": {
+    "headers": [
+     "Emission source",
+     "Scope",
+     "GHG Protocol category",
+     "Status at OC",
+     "In BC statutory reporting?",
+     "In STARS OP6?"
+    ],
+    "rows": [
+     [
+      "OC fleet fuel",
+      "Scope 1",
+      "Mobile combustion",
+      "Reported annually",
+      "Yes, mandatory",
+      "Yes, and it drives OP6.2 and 6.3"
+     ],
+     [
+      "OC fleet and charging electricity",
+      "Scope 2",
+      "Purchased electricity",
+      "Reported annually",
+      "Yes, mandatory",
+      "Yes, and it drives OP6.2 and 6.3"
+     ],
+     [
+      "Staff and student commuting",
+      "Scope 3",
+      "Category 7",
+      "Unquantified. First figure ~Sept 2026",
+      "No, explicitly out of scope",
+      "Optional. 0.5 of 16 points"
+     ],
+     [
+      "Institutional business travel",
+      "Scope 3",
+      "Category 6",
+      "Unquantified",
+      "No, out of scope for post-secondary",
+      "Optional. 0.5 of 16 points"
+     ]
+    ]
+   },
+   "truths": [
+    [
+     "Commuting is the biggest transportation emission source, and OC has never measured it.",
+     "At UBC Vancouver, commuting produces 35,114 tCO₂e a year against a whole fleet of 1,093. Commuting is roughly 32 times the fleet, and nearly equals buildings and energy supply combined. UBC also reports its extended (Scope 3) emissions as almost 2.5 times its campus operations emissions. Okanagan College's own first figure lands around September 2026, from Task 2 of the Urban Systems workplan."
+    ],
+    [
+     "None of it appears in OC's statutory reporting.",
+     "BC's Carbon Neutral Government boundary covers stationary sources in owned or leased buildings, fuel burned in owned or leased mobile assets, and copy paper. Employee commuting is explicitly out of scope, and business travel is out of scope for post-secondary institutions specifically. Every tonne of commuting emission Okanagan College has ever produced is invisible in its Climate Change Accountability Report."
+    ],
+    [
+     "The carbon price signal is gone.",
+     "BC eliminated the consumer carbon tax effective 1 April 2025; the rate is $0. The only carbon price OC actually pays is the $25 per tonne public sector offset price, confirmed in peer filings for reporting years 2024 and 2025, and that applies only to in-boundary emissions. A business case built on avoided carbon tax is a business case built on nothing."
+    ],
+    [
+     "STARS pays for the behaviour, not the tonnage.",
+     "OP14 commute modal split is worth 6 points. Fully quantifying commuting emissions inside OP6 is worth 0.5 of 16, and commuting tonnes do not feed OP6.2, 6.3 or 6.4, which are Scope 1 and 2 only. Mode shift earns roughly twelve times what measurement does, but measurement is what makes the mode shift mean something."
+    ]
+   ],
+   "why": "So why pivot the plan on carbon when the compliance driver is absent and the points sit elsewhere? Three reasons, and they are the reasons that survive scrutiny.",
+   "whyPoints": [
+    [
+     "It sends effort where the emissions actually are.",
+     "A carbon frame kills the instinct to lead with EV fleet purchases. The whole fleet is 3% of operations emissions at UBC and 0.2% of total emissions at Langara, a rounding error. The same frame promotes trip elimination, which a mode-share frame undervalues."
+    ],
+    [
+     "It is the only frame that connects transportation to the other twelve impact areas.",
+     "Carbon Zero is the aggregation point in the R1 framework, and Transportation is one of its three feeder streams alongside Infrastructure and Supply Chain. Without a tonnage, Transportation cannot report into it."
+    ],
+    [
+     "The boundary will not stay where it is.",
+     "Scope 3 disclosure is tightening across every reporting regime. An institution already holding a defensible commuting inventory when the boundary moves is years ahead of one that starts measuring then."
+    ]
+   ],
+   "leverage": {
+    "headers": [
+     "Lever",
+     "Carbon effect per trip shifted",
+     "Feasibility rank",
+     "Carbon rank"
+    ],
+    "rows": [
+     [
+      "Trip elimination (remote and flexible work, online delivery)",
+      "The whole trip. 100% of its emissions, and it costs nothing.",
+      "4",
+      "1"
+     ],
+     [
+      "Drive alone → active transport",
+      "The whole trip. 100%, but bounded by distance and topography.",
+      "6",
+      "2"
+     ],
+     [
+      "Drive alone → transit",
+      "Roughly 74% of the per-km emission on Dalhousie's published factors.",
+      "3",
+      "3"
+     ],
+     [
+      "Drive alone → carpool passenger",
+      "The occupancy divisor. A two-person carpool removes one vehicle trip across the pair, not two.",
+      "1",
+      "4"
+     ],
+     [
+      "Parking pricing",
+      "Indirect. Its carbon value is the size of the shift it causes, not a shift in itself.",
+      "2",
+      "n/a"
+     ],
+     [
+      "Fleet electrification and EV charging",
+      "Scope 1 only, and small: 3% of operations emissions at UBC, 0.2% of total at Langara.",
+      "7 and 8",
+      "Last"
+     ]
+    ]
+   },
+   "leverageResolution": "These two rankings conflict less than they look. Carpooling stays first to start, because it is free, the demand is measured at 32% against 6% actual, and half a trip removed at scale beats a whole trip removed at no scale. But the carbon frame does one thing the feasibility frame could not: it promotes remote and flexible work from fourth to first on effect per trip, and that lever costs nothing. That is the single change the carbon pivot makes to what Okanagan College should actually do.",
+   "method": {
+    "standard": "GHG Protocol Corporate Value Chain (Scope 3) Standard, Category 7, distance-based method. Urban Systems is deriving average commuting distances per campus from Census population data and combining them with the measured mode split to calculate direct tailpipe emissions.",
+    "disciplines": [
+     [
+      "Publish the distance assumption and hold it constant.",
+      "State the per-mode average trip distance and its source, and keep it fixed between baseline and target years, so a mode shift rather than a methodology change drives the reported delta."
+     ],
+     [
+      "Model the mode-shift matrix, not a headline percentage.",
+      "A mode-share target is not a GHG target. Shifting a driver to transit cuts roughly three-quarters of the per-kilometre emission on Dalhousie's published factors (256 g CO₂e per km driven against 66.59 g per passenger-km on transit). Shifting a driver to a carpool passenger cuts by the occupancy divisor, not the mode factor. Shifting a trip to remote delivery removes it entirely."
+     ],
+     [
+      "State what the estimate does not cover.",
+      "Task 2 covers direct tailpipe emissions only. Indirect and embodied emissions are explicitly outside the scope of this phase, and the report should say so wherever the figure is quoted."
+     ]
+    ],
+    "sanity": "Published Canadian inventories imply an order of magnitude of roughly 0.2 to 0.6 tCO₂e per campus user per year (University of Toronto FY2023: 20,444 tCO₂e across 93,797 students and employees; Dalhousie 2023-24: 8,558.2 tCO₂e at its Halifax campuses). Use it as a range check on OC's own result, never as a substitute for it, both are dense urban campuses unlike Salmon Arm or Penticton."
+   },
+   "tagLegend": [
+    [
+     "S1",
+     "Scope 1. Fuel burned in OC-owned vehicles. In BC's mandatory reporting boundary."
+    ],
+    [
+     "S3.7",
+     "Scope 3 Category 7. Staff and student commuting. Outside the mandatory boundary."
+    ],
+    [
+     "S3.6",
+     "Scope 3 Category 6. Institutional business travel. Outside the mandatory boundary."
+    ],
+    [
+     "Measure",
+     "Produces or improves a number. Nothing can be claimed without these."
+    ],
+    [
+     "Abate",
+     "Reduces actual tonnes."
+    ],
+    [
+     "Enable",
+     "Makes abatement possible: a decision, a funding route, a data fix, an equity fix."
+    ]
+   ],
+   "stars": [
+    {
+     "credit": "OP 14",
+     "title": "Commute Modal Split",
+     "pts": "6",
+     "needs": "Percentage of students and employees using more sustainable options, weighted by FTE share. A behaviour metric, not a tonnage.",
+     "stands": "1.97 of 6 earned on the November 2025 field counts. 4.03 points unclaimed in this credit alone.",
+     "state": "part"
+    },
+    {
+     "credit": "OP 13",
+     "title": "Vehicle Fleet",
+     "pts": "2",
+     "needs": "Percentage of the motorized fleet that is zero emission or plug-in hybrid. A count metric, not a tonnage.",
+     "stands": "Boundary unresolved. On-road only gives 22.2 per cent, including the 14 golf carts gives 52.8. No BC peer has a precedent.",
+     "state": "open"
+    },
+    {
+     "credit": "OP 15",
+     "title": "Air Travel",
+     "pts": "2",
+     "needs": "Applies only at USD $50,000 or more of directly financed air travel a year.",
+     "stands": "Applicability unconfirmed. If OC sits below the threshold the credit leaves the denominator rather than scoring zero.",
+     "state": "unc"
+    },
+    {
+     "credit": "OP 6.1",
+     "title": "Scope 3 commuting",
+     "pts": "0.5",
+     "needs": "Full accounting of GHG Protocol Category 7, staff and student commuting. Partial accounting earns 0.25.",
+     "stands": "Unquantified. The first figure lands around September 2026.",
+     "state": "none"
+    },
+    {
+     "credit": "OP 6.1",
+     "title": "Scope 3 business travel",
+     "pts": "0.5",
+     "needs": "Full accounting of GHG Protocol Category 6, institutional business travel.",
+     "stands": "Unquantified. Scheduled as a Year 2 activity with Finance.",
+     "state": "none"
+    }
+   ],
+   "starsCaption": "Verified against the AASHE STARS Technical Manual version 3.0.1. OP 13, OP 14 and OP 15 make up the Transportation subcategory, worth 10 points in total. The OP 6.1 rows sit in Energy and Climate, not Transportation, and are shown here because commuting and business travel are the emissions this impact area owns. Commuting tonnes do not feed OP 6.2, 6.3 or 6.4, which normalize on Scope 1 and 2 only.",
+   "target": {
+    "outcome": {
+     "tag": "Outcome target",
+     "stmt": "By [target year], reduce Scope 3 Category 7 commuting emissions __% below the [baseline year] baseline established by the Urban Systems emissions estimate.",
+     "base": "Baseline: <b>unquantified today<\/b>. Task 2 of the Urban Systems workplan, $4,644 of the $22,283 total, delivers the estimate and the calculation worksheet around September 2026.",
+     "why": "The number is deliberately blank. Okanagan College has no commuting tonnage yet, and setting a percentage before the baseline exists would break the plan's own rule against unfounded figures. The mechanism is fixed now; the number is set in Year 1, when the tonnage lands, and goes to the executive alongside the mode-share target. UBC Vancouver is the only BC post-secondary institution publishing a numeric commuting-emissions target: a 45% reduction from 2010 levels by 2030. UVic carries a 70% sustainable modal split target but no commuting tonnage target. SFU has neither yet, and states its metrics will be set in year one."
+    },
+    "lever": {
+     "tag": "Lever target",
+     "stmt": "By 2032, 45% of students and employees arrive at an OC campus by a mode other than driving alone, measured against the 33% baseline established by field count in November 2025.",
+     "base": "Baseline: <b>33 per cent<\/b> arriving by a mode other than driving alone, measured by field count in November 2025 across 4,280 person trips at all four campuses.",
+     "why": "Chosen at the recommended tier of three. No BC college in the comparator set publishes a mode share target at all, so there is no benchmark to anchor to and this is a judgement made on our own measured baseline."
+    }
+   },
+   "years": {
+    "Y1": {
+     "theme": "Close the data gaps, pull the free levers",
+     "outcome": "We report a transportation credit built on measured data for the first time, and every lever that costs nothing is actually being pulled.",
+     "activities": [
+      [
+       "T1.1",
+       "Submit STARS OP14 at 1.97/6 on the Nov 2025 field counts"
+      ],
+      [
+       "T1.2",
+       "Resolve the OP13 fleet boundary: do golf carts count?"
+      ],
+      [
+       "T1.3",
+       "Reconcile the EV station and stall contradictions with Facilities"
+      ],
+      [
+       "T1.4",
+       "Test OP15 applicability against the USD $50,000 air-travel threshold"
+      ],
+      [
+       "T1.5",
+       "Receive commuting tCO₂e from the Urban Systems workplan (~Sept 2026)"
+      ],
+      [
+       "T1.6",
+       "Run Rideshark as a staffed carpool programme, not just a platform"
+      ],
+      [
+       "T1.7",
+       "Register FLO stations for BC LCFS credits; activate the EV Charging Alliance"
+      ],
+      [
+       "T1.8",
+       "Close the three named CPTED accessibility failures"
+      ],
+      [
+       "T1.9",
+       "Answer U-Pass status, paired with a BC Transit service-frequency ask"
+      ],
+      [
+       "T1.10",
+       "Kelowna transit exchange completes; confirm KVR and Safe Mobility commitments"
+      ],
+      [
+       "T1.11",
+       "Count Vernon Aerospace into the parking and modal inventory"
+      ],
+      [
+       "T1.12",
+       "Adopt the GHG Protocol distance-based method; publish the distance assumption"
+      ],
+      [
+       "T1.13",
+       "Set the Scope 3 Category 7 reduction target once the tonnage lands"
+      ]
+     ]
+    },
+    "Y2": {
+     "theme": "Turn the evidence into a plan and a price signal",
+     "outcome": "An adopted four-campus TDM Plan, a formal 2032 target, and parking priced as a demand instrument rather than a revenue line.",
+     "activities": [
+      [
+       "T2.1",
+       "Adopt the four-campus TDM Plan; set the 2032 target formally at 45%"
+      ],
+      [
+       "T2.2",
+       "Review parking pricing as a demand-management instrument"
+      ],
+      [
+       "T2.3",
+       "Fix the EV double-charge (hourly rate plus a parking permit)"
+      ],
+      [
+       "T2.4",
+       "Complete the end-of-trip facilities needs assessment across all campuses"
+      ],
+      [
+       "T2.5",
+       "Scope an inter-campus shuttle pilot"
+      ],
+      [
+       "T2.6",
+       "Formalize the biennial re-count method (six hours over two days per campus)"
+      ],
+      [
+       "T2.7",
+       "Quantify business travel emissions (Scope 3 Category 6)"
+      ],
+      [
+       "T2.8",
+       "Apply a BEV-versus-PHEV screen in-house at each fleet replacement"
+      ],
+      [
+       "T2.9",
+       "Model the mode-shift matrix so each lever carries a carbon coefficient"
+      ],
+      [
+       "T2.10",
+       "Promote remote and flexible work, the highest carbon effect per trip"
+      ]
+     ]
+    },
+    "Y3": {
+     "theme": "First full credit set; every campus materially better",
+     "outcome": "Transportation becomes a scoring strength rather than a gap, and the campuses with the fewest options have measurably more of them.",
+     "activities": [
+      [
+       "T3.1",
+       "Submit the full OP13 to OP15 set on real data. Silver target"
+      ],
+      [
+       "T3.2",
+       "Deliver an accessible transit stop at Salmon Arm"
+      ],
+      [
+       "T3.3",
+       "Extend micromobility to Salmon Arm, the only campus without it"
+      ],
+      [
+       "T3.4",
+       "Build the first funded end-of-trip improvements"
+      ],
+      [
+       "T3.5",
+       "Review one-way loop routing at Penticton, Vernon and Salmon Arm"
+      ],
+      [
+       "T3.6",
+       "Publish TDM year-one results, including where we are behind"
+      ],
+      [
+       "T3.7",
+       "Advance municipal active-transport connections"
+      ],
+      [
+       "T3.8",
+       "Report commuting tCO₂e alongside modal split in the first full submission"
+      ]
+     ]
+    },
+    "Y4": {
+     "theme": "Prove movement, attributably",
+     "outcome": "A second count on the same method shows movement, and the movement traces to named levers rather than assertion.",
+     "activities": [
+      [
+       "T4.1",
+       "Run the second modal split count on the Y2 method"
+      ],
+      [
+       "T4.2",
+       "Run the second barrier survey at n≈400 for ±5 points"
+      ],
+      [
+       "T4.3",
+       "Rebase parking supply on measured demand"
+      ],
+      [
+       "T4.4",
+       "Implement the U-Pass, or escalate the service ask with two years of evidence"
+      ],
+      [
+       "T4.5",
+       "Continue fleet electrification on CleanBC Go Electric funding"
+      ],
+      [
+       "T4.6",
+       "Size charging expansion on the Alliance's own economics"
+      ],
+      [
+       "T4.7",
+       "Re-run the emissions worksheet, holding the distance assumption constant"
+      ]
+     ]
+    },
+    "Y5": {
+     "theme": "Demonstrated improvement, and a funding model that works",
+     "outcome": "The transportation credits move rather than merely exist, and the programme is partly paying for itself.",
+     "activities": [
+      [
+       "T5.1",
+       "Submit OP13 to OP15 showing improvement against 2025"
+      ],
+      [
+       "T5.2",
+       "Report the interim mode-share checkpoint publicly"
+      ],
+      [
+       "T5.3",
+       "Consider a sustainable transportation levy"
+      ],
+      [
+       "T5.4",
+       "Reinvest carbon-credit revenue into charging and active transport"
+      ],
+      [
+       "T5.5",
+       "Complete federal Clean Fuel Regulations network-provider registration"
+      ],
+      [
+       "T5.6",
+       "Report commuting tonnage as an annual trend, not a one-off"
+      ],
+      [
+       "T5.7",
+       "Fold commuting and business travel into OP6 and the Carbon Zero aggregation"
+      ]
+     ]
+    },
+    "Y6": {
+     "theme": "Hit the target and rebase",
+     "outcome": "45% of arrivals by a mode other than driving alone, on three measured points rather than two, delivered to Gold evidence standard.",
+     "activities": [
+      [
+       "T6.1",
+       "Reach 45% of arrivals not driving alone, against the 33% baseline"
+      ],
+      [
+       "T6.2",
+       "Run the third modal count: three points, not two"
+      ],
+      [
+       "T6.3",
+       "Deliver the performance year to Gold evidence standard"
+      ],
+      [
+       "T6.4",
+       "Report on-road electric and hybrid fleet share against the Y2 target"
+      ],
+      [
+       "T6.5",
+       "Rebase the transportation plan for 2032-2038"
+      ],
+      [
+       "T6.6",
+       "Report the six-year emissions trend; rebase the carbon target for 2032-2038"
+      ]
+     ]
+    }
+   },
+   "tags": {
+    "T1.1": [
+     "S3.7",
+     "Measure"
+    ],
+    "T1.2": [
+     "S1",
+     "Measure"
+    ],
+    "T1.3": [
+     "S1",
+     "Enable"
+    ],
+    "T1.4": [
+     "S3.6",
+     "Measure"
+    ],
+    "T1.5": [
+     "S3.7",
+     "Measure"
+    ],
+    "T1.6": [
+     "S3.7",
+     "Abate"
+    ],
+    "T1.7": [
+     "S1",
+     "Enable"
+    ],
+    "T1.8": [
+     "",
+     "Enable"
+    ],
+    "T1.9": [
+     "S3.7",
+     "Abate"
+    ],
+    "T1.10": [
+     "S3.7",
+     "Abate"
+    ],
+    "T1.11": [
+     "S3.7",
+     "Measure"
+    ],
+    "T1.12": [
+     "S3.7",
+     "Measure"
+    ],
+    "T1.13": [
+     "S3.7",
+     "Measure"
+    ],
+    "T2.1": [
+     "S3.7",
+     "Abate"
+    ],
+    "T2.2": [
+     "S3.7",
+     "Abate"
+    ],
+    "T2.3": [
+     "S1",
+     "Enable"
+    ],
+    "T2.4": [
+     "S3.7",
+     "Enable"
+    ],
+    "T2.5": [
+     "S3.7",
+     "Abate"
+    ],
+    "T2.6": [
+     "S3.7",
+     "Measure"
+    ],
+    "T2.7": [
+     "S3.6",
+     "Measure"
+    ],
+    "T2.8": [
+     "S1",
+     "Abate"
+    ],
+    "T2.9": [
+     "S3.7",
+     "Measure"
+    ],
+    "T2.10": [
+     "S3.7",
+     "Abate"
+    ],
+    "T3.1": [
+     "S3.7",
+     "Measure"
+    ],
+    "T3.2": [
+     "S3.7",
+     "Abate"
+    ],
+    "T3.3": [
+     "S3.7",
+     "Abate"
+    ],
+    "T3.4": [
+     "S3.7",
+     "Abate"
+    ],
+    "T3.5": [
+     "S3.7",
+     "Enable"
+    ],
+    "T3.6": [
+     "S3.7",
+     "Measure"
+    ],
+    "T3.7": [
+     "S3.7",
+     "Abate"
+    ],
+    "T3.8": [
+     "S3.7",
+     "Measure"
+    ],
+    "T4.1": [
+     "S3.7",
+     "Measure"
+    ],
+    "T4.2": [
+     "S3.7",
+     "Measure"
+    ],
+    "T4.3": [
+     "S3.7",
+     "Enable"
+    ],
+    "T4.4": [
+     "S3.7",
+     "Abate"
+    ],
+    "T4.5": [
+     "S1",
+     "Abate"
+    ],
+    "T4.6": [
+     "S1",
+     "Enable"
+    ],
+    "T4.7": [
+     "S3.7",
+     "Measure"
+    ],
+    "T5.1": [
+     "S3.7",
+     "Measure"
+    ],
+    "T5.2": [
+     "S3.7",
+     "Measure"
+    ],
+    "T5.3": [
+     "",
+     "Enable"
+    ],
+    "T5.4": [
+     "S1",
+     "Enable"
+    ],
+    "T5.5": [
+     "S1",
+     "Enable"
+    ],
+    "T5.6": [
+     "S3.7",
+     "Measure"
+    ],
+    "T5.7": [
+     "S3.7",
+     "Measure"
+    ],
+    "T6.1": [
+     "S3.7",
+     "Abate"
+    ],
+    "T6.2": [
+     "S3.7",
+     "Measure"
+    ],
+    "T6.3": [
+     "S3.7",
+     "Measure"
+    ],
+    "T6.4": [
+     "S1",
+     "Measure"
+    ],
+    "T6.5": [
+     "",
+     "Enable"
+    ],
+    "T6.6": [
+     "S3.7",
+     "Measure"
+    ]
+   },
+   "asks": [
+    [
+     "Confirm the target",
+     "Adopt 45% by 2032 against the measured 33% baseline. No BC college in the comparator set publishes a mode-share target, so this is a judgement, and it should be yours."
+    ],
+    [
+     "Name the owners",
+     "Eleven of twelve action areas have no accountable position. This costs nothing and blocks everything else."
+    ],
+    [
+     "Approve the STARS ladder",
+     "Silver at the Nov 2028 submission, Gold at Nov 2032. A maintained Silver would make us the only BC college with a current rating."
+    ],
+    [
+     "Fund three accessibility closures",
+     "Salmon Arm Trades, Kelowna Lot 14, Vernon. Named in the 2024 CPTED audits, small, and closeable in one budget cycle."
+    ],
+    [
+     "Set the carbon target in Year 1, not today",
+     "Okanagan College has no commuting tonnage yet. It arrives around September 2026, and the Category 7 reduction target should be set against it then and brought to you with the mode-share target as one decision. UBC's 45% below 2010 by 2030 is the only BC post-secondary precedent to anchor against."
+    ],
+    [
+     "Fund this knowing there is no compliance driver",
+     "Commuting sits outside BC's Carbon Neutral Government boundary and the consumer carbon tax was eliminated in April 2025. There is no offset cost to avoid and no tax to save. The case is STARS standing, the position of being the BC college that measured what its peers have not, and the near-certainty that Scope 3 boundaries tighten. We would rather say that plainly than build you a return on investment that does not exist."
+    ]
+   ],
+   "openQuestions": [
+    [
+     "OP13 fleet boundary",
+     "Do golf carts count in the motorized fleet denominator? Moves OC's reported figure from 22.2% to 52.8%.",
+     "Sustainability Services + AASHE",
+     "Y1"
+    ],
+    [
+     "Two contradictions in OC's own EV data",
+     "19 versus 21 charging stations, and an EV stall/station mismatch at Vernon and Salmon Arm.",
+     "Facilities, against the FLO record",
+     "Y1"
+    ],
+    [
+     "Electrical utility territory per campus",
+     "Two CleanBC Go Electric rebate streams are FortisBC-only; assuming eligibility risks a funding gap mid-project.",
+     "Facilities",
+     "Y1"
+    ],
+    [
+     "U-Pass and transit agreement status",
+     "Still open. Pursue paired with a service-frequency ask, since fare is not the binding barrier.",
+     "OCSU, BC Transit",
+     "Y1"
+    ],
+    [
+     "Employee parking taxable-benefit treatment",
+     "Review before redesigning pricing or designing any transit subsidy, not after.",
+     "Finance and Payroll",
+     "Y1"
+    ],
+    [
+     "Per-campus FTE",
+     "Total FTE is known at 10,081; the split is not, so stalls per FTE stays blocked.",
+     "Institutional Research",
+     "Y1"
+    ],
+    [
+     "Directly-financed air travel spend per year",
+     "Determines whether OP15 applies at all. Threshold is USD $50,000.",
+     "Finance",
+     "Y1"
+    ],
+    [
+     "KVR corridor commitment",
+     "Which document actually commits OC to a KVR-corridor connection at Penticton? The City's public strategy page does not show one.",
+     "Campus Planning",
+     "Y1"
+    ],
+    [
+     "Safe Mobility Action Plan participation",
+     "Should OC formally confirm participation terms, given it is a city-wide initiative with no campus-specific commitment visible publicly?",
+     "Campus Planning",
+     "Y1"
+    ]
+   ],
+   "footNote": "Primary source: Current State Transportation, Okanagan College, 12 August 2026, whose embedded hyperlinks were fetched and which surfaced real parking pricing, real EV charging user costs, the $1.7M externally funded Kelowna transit exchange, and two municipal partnership claims that were walked back to what the cities' own pages show. Baseline evidence: Urban Systems OC Transportation Assessment, field counts November 2025, reported 6 May 2026; Campus Parking Stall Count September 2024; 2026 Fleet Summary August; Transportation Emissions Evaluation Workplan 11 June 2026; Franc L Architecture Accessibility and CPTED reports 2024; OC Capital Master Plan 30 May 2025. Standards: AASHE STARS Technical Manual version 3.0.1; GHG Protocol Corporate and Corporate Value Chain Scope 3 Standards; CSA B651:23; CleanBC Go Electric Fleet Charging Program Guide 2025. Peer evidence via the SustainOC Sustainability Document Hub, the institutions' own sites and BC Climate Change Accountability Reports; AASHE per credit pages are login gated, so peer point values are not reported. Two internal contradictions in OC's own source material are flagged rather than reconciled. One peer derived assumption, the U-Pass lever ranking, was corrected against OC's own barrier data and is logged as a correction. No Okanagan College figure has been estimated anywhere in this brief.",
+   "asksNote": "Four further decisions sit in the detailed plan: the OP 13 fleet boundary, the EV data reconciliation, three inputs from Finance and Institutional Research, and endorsing the charging credit registration as a revenue action. The detailed plan carries full activity wording, accountable positions, timing bands, KPI definitions against published standards, operational dependencies and the CAPEX and OPEX profile."
+  }
+ ],
+ "tierOptions": [
+  {
+   "pct": "40%",
+   "name": "Conservative",
+   "sub": "The free levers only, nothing new bought",
+   "adds": "Nothing Okanagan College does not already own. Rideshark run as a staffed carpool programme, the three named accessibility failures closed, parking pricing reviewed, and the biennial count method locked in so the trend is defensible.",
+   "requires": [
+    "A named owner for the Rideshark carpool programme",
+    "Facilities time to close the three CPTED failures and reconcile the EV data",
+    "The OP13 fleet boundary decided and documented"
+   ],
+   "capital": "None. No new infrastructure.",
+   "operating": "$22,283 emissions workplan, already committed. Modal counts every two to three years and an annual barrier survey. Rideshark programme coordination not yet costed.",
+   "revenue": "Roughly $13,000 a year in BC Low Carbon Fuel Standard credits once the FLO stations are registered.",
+   "external": "None critical. Okanagan College can deliver this alone.",
+   "carbon": "Produces the measurement but buys little abatement. The tonnage becomes visible and the trend becomes defensible, which is worth having on its own. But with only the free levers running, the reduction against baseline will be modest and mostly attributable to carpooling, half a trip at a time.",
+   "risk": "Leaves most of the 4.03 unclaimed OP14 points on the table, and commuting tonnage keeps rising with enrolment. Defensible, but a holding position rather than a plan."
+  },
+  {
+   "pct": "45%",
+   "name": "Recommended",
+   "sub": "A deliberate price signal and facilities that work",
+   "adds": "Everything above, plus an adopted four-campus TDM Plan, parking priced deliberately as a demand-management instrument for the first time, end-of-trip facilities built where the assessment says they are needed, an accessible transit stop and micromobility at Salmon Arm, and active-transport connections advanced with the four municipalities.",
+   "requires": [
+    "Everything in the conservative tier",
+    "Finance and Payroll to settle the employee-parking taxable-benefit question before pricing is redesigned",
+    "Campus Planning liaison capacity for four municipalities and two regional districts",
+    "A funded end-of-trip capital line, sized after the Year 2 assessment"
+   ],
+   "capital": "End-of-trip facilities, not yet costed (sized by the Year 2 assessment). Charging expansion at roughly $12,000 per port, or $24,000 per two-port Level 2 charger under common procurement, with CleanBC Go Electric covering 75% up to $4,000 per station and $50,000 per applicant per year. The $1.7M Kelowna transit exchange is externally funded and needs no OC capital.",
+   "operating": "As the conservative tier, plus $500 to $2,000 maintenance and $200 to $1,000 a year networking per charger.",
+   "revenue": "The LCFS credits above, plus a parking restructure designed revenue-neutral or positive rather than as a revenue grab.",
+   "external": "BC Transit service frequency on the Kelowna and Vernon corridors. This is the one thing Okanagan College cannot deliver alone, and journey time (26%) and frequency (25%) are precisely the two barriers that matter most.",
+   "carbon": "The first tier where the carbon claim is substantive. Parking pricing and the TDM Plan move volume, remote and flexible work removes whole trips, and the corridors improve if BC Transit moves. This is the tier at which a published Category 7 reduction target becomes defensible.",
+   "risk": "If BC Transit does not improve service, transit share stays flat and the target leans harder on carpooling than planned."
+  },
+  {
+   "pct": "50%",
+   "name": "Ambitious",
+   "sub": "A pass programme, a shuttle, and a funding stream",
+   "adds": "Everything above, plus a U-Pass or equivalent pass programme in steady operation, an inter-campus shuttle running, and a sustainable transportation levy funding the programme rather than the operating budget absorbing it.",
+   "requires": [
+    "Everything in the recommended tier",
+    "A dedicated sustainable transportation position. TRU resources one, OC does not",
+    "An agreement or referendum with OCSU on a pass programme and a levy"
+   ],
+   "capital": "As the recommended tier. A shuttle is an operating commitment rather than a capital one.",
+   "operating": "Shuttle operating cost, not yet costed. Camosun runs the Camosun Express free to students and employees between two campuses but publishes no cost, and OC has four campuses plus two satellites. Plus one additional staff position.",
+   "revenue": "A levy at roughly UBC's $0.25 per trip on parking permits, on top of the LCFS credits.",
+   "external": "OCSU and BC Transit both have to say yes. Two of the three additions sit outside Okanagan College's control.",
+   "carbon": "The largest tonnage reduction, and the only tier where transit shift carries real weight. A pass programme plus improved service is what converts the 23% who say they would prefer transit into people who use it, and transit carries roughly three-quarters of the per-km saving on a drive-alone trip.",
+   "risk": "Committing to 50% before the OCSU and BC Transit conversations land would put a public target on other people's decisions."
+  }
+ ],
+ "tierFrame": "The three tiers differ less in ambition than in how much of the outcome depends on somebody else. The conservative tier is entirely within Okanagan College's gift. The recommended tier needs BC Transit to improve service on two corridors. The ambitious tier needs OCSU as well. The question is which tier we are willing to defend publicly if the external parties do not move.",
+ "rail": {
+  "bandLabel": "Three dates, one autumn",
+  "nodes": [
+   {
+    "d": "Nov 2025",
+    "w": "Field counts at all four campuses. 4,280 person trips, already done",
+    "hot": false
+   },
+   {
+    "d": "Sept 2026",
+    "w": "Urban Systems delivers OC's first measured commuting tCO₂e",
+    "hot": true
+   },
+   {
+    "d": "Oct 2026",
+    "w": "Kelowna transit exchange expansion completes. $1.7M, no OC capital",
+    "hot": true
+   },
+   {
+    "d": "Nov 2026",
+    "w": "First OP14 submission on measured data, at 1.97 of 6",
+    "hot": true
+   },
+   {
+    "d": "Nov 2028",
+    "w": "Silver target submission, with the full OP13 to OP15 credit set",
+    "hot": false
+   }
+  ]
+ },
+ "tierRows": [
+  [
+   "What it adds",
+   "adds"
+  ],
+  [
+   "What we have to do",
+   "requires"
+  ],
+  [
+   "Capital",
+   "capital"
+  ],
+  [
+   "Recurring cost",
+   "operating"
+  ],
+  [
+   "What comes back to us",
+   "revenue"
+  ],
+  [
+   "Depends on someone else",
+   "external"
+  ],
+  [
+   "What it does for carbon",
+   "carbon"
+  ],
+  [
+   "Biggest risk",
+   "risk"
+  ]
+ ],
+ "tierCaption": "Never estimated. Where no figure exists the entry says so. Fleet electrification appears in no tier as a carbon lever because it is Scope 1 and small; it is carried in the plan on its own merits and on the charging revenue, not as an emissions strategy.",
+ "starsCaption": "Verified against the AASHE STARS Technical Manual version 3.0.1. OP 13, OP 14 and OP 15 make up the Transportation subcategory, worth 10 points in total. The OP 6.1 rows sit in Energy and Climate, not Transportation, and are shown here because commuting and business travel are the emissions this impact area owns. Commuting tonnes do not feed OP 6.2, 6.3 or 6.4, which normalize on Scope 1 and 2 only."
+};
+
+var el = function (id) { return document.getElementById(id); };
+var esc = function (s) {
+  return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+};
+var setHTML = function (id, html) { var n = el(id); if (n) { n.innerHTML = html; } };
+var tbl = function (cols, head, body, caption, cls) {
+  return "<table" + (cls ? ' class="' + cls + '"' : "") + ">" +
+    "<colgroup>" + cols.map(function (w) { return '<col style="width:' + w + '%">'; }).join("") + "</colgroup>" +
+    "<thead>" + head + "</thead><tbody>" + body + "</tbody>" +
+    (caption ? "<caption>" + caption + "</caption>" : "") + "</table>";
+};
+
+var renderFigures = function (m) {
+  setHTML("figs", m.figures.map(function (f) {
+    var unit = f.unit ? '<span class="unit">' + esc(f.unit) + "</span>" : "";
+    return '<div class="fig' + (f.hero ? " hero" : "") + '">' +
+      '<div class="num">' + esc(f.n) + unit + "</div>" +
+      '<div class="lbl">' + esc(f.label) + "</div>" +
+      '<p class="sub2">' + esc(f.sub) + "</p></div>";
+  }).join(""));
+};
+
+var renderRail = function (r) {
+  setHTML("railWrap", '<div class="rail">' +
+    '<div class="rail-band"><span>' + esc(r.bandLabel) + "</span></div>" +
+    '<div class="rail-line"></div>' +
+    r.nodes.map(function (n) {
+      return '<div class="rail-node' + (n.hot ? " hot" : "") + '">' +
+        '<span class="dot"></span><div class="d">' + esc(n.d) + "</div>" +
+        '<p class="w">' + esc(n.w) + "</p></div>";
+    }).join("") + "</div>");
+};
+
+var renderLocator = function (fw, m) {
+  var drafted = ["Organizational Structure & Funding"];
+  setHTML("locatorGrid", fw.focusAreas.map(function (fa) {
+    var active = fa.impactAreas.indexOf(m.impactArea) > -1;
+    var items = fa.impactAreas.map(function (ia) {
+      if (ia === m.impactArea) { return '<div class="loc-item on">' + esc(ia) + " <i>&middot; this brief</i></div>"; }
+      if (drafted.indexOf(ia) > -1) { return '<div class="loc-item done">' + esc(ia) + " <i>&middot; drafted</i></div>"; }
+      return '<div class="loc-item">' + esc(ia) + "</div>";
+    }).join("");
+    return '<div class="loc-col' + (active ? " active" : "") + '"><h4>' + esc(fa.name) + "</h4>" + items + "</div>";
+  }).join(""));
+};
+
+var renderSituation = function (m) {
+  setHTML("situation-text", m.situation.map(function (p, i) {
+    return "<p" + (i === 0 ? ' class="lead"' : "") + ">" + esc(p) + "</p>";
+  }).join(""));
+  setHTML("peer-text", m.peerLine.map(function (p) { return "<p>" + p + "</p>"; }).join(""));
+};
+
+var numbered = function (id, rows) {
+  setHTML(id, rows.map(function (r) {
+    return '<div class="ask"><div><h4>' + esc(r[0]) + "</h4><p>" + esc(r[1]) + "</p></div></div>";
+  }).join(""));
+};
+
+var renderCase = function (m) {
+  setHTML("carbonHeadline", esc(m.carbonHeadline));
+  setHTML("chain", '<div class="tw">' + tbl([38, 62],
+    "<tr><th>What Transportation delivers</th><th>What it changes</th></tr>",
+    m.chain.map(function (c) {
+      return '<tr><td class="strong prose">' + esc(c.step) + '</td><td class="prose">' + esc(c.then) + "</td></tr>";
+    }).join(""), "", "t-top") + "</div>");
+
+  setHTML("scopeTable", tbl([23, 9, 15, 19, 18, 16],
+    "<tr>" + m.scopeTable.headers.map(function (h, i) {
+      return "<th" + (i ? ' class="c"' : "") + ">" + esc(h) + "</th>";
+    }).join("") + "</tr>",
+    m.scopeTable.rows.map(function (r) {
+      return "<tr>" + r.map(function (c, i) {
+        return "<td class=\"" + (i === 0 ? "strong prose" : "c prose") + (i === 1 ? " nw" : "") + "\">" + esc(c) + "</td>";
+      }).join("") + "</tr>";
+    }).join(""),
+    "Two of the four sources are inside BC's mandatory reporting boundary and two are not. That distinction shapes everything below.",
+    "t-top"));
+
+  numbered("truths", m.truths);
+  setHTML("whyLede", esc(m.why));
+  numbered("whyPoints", m.whyPoints);
+
+  setHTML("leverTable", tbl([32, 44, 12, 12],
+    "<tr>" + m.leverage.headers.map(function (h, i) {
+      return "<th" + (i > 1 ? ' class="c"' : "") + ">" + esc(h) + "</th>";
+    }).join("") + "</tr>",
+    m.leverage.rows.map(function (r) {
+      return "<tr>" + r.map(function (c, i) {
+        return "<td class=\"" + (i === 0 ? "strong prose" : (i > 1 ? "c strong" : "prose")) + "\">" + esc(c) + "</td>";
+      }).join("") + "</tr>";
+    }).join(""), "", "t-top"));
+  setHTML("leverFrame", esc(m.leverageResolution));
+
+  setHTML("methodStd", esc(m.method.standard));
+  numbered("methodList", m.method.disciplines);
+  setHTML("sanityNote", "<b>Sanity check only, never a substitute.</b> " + esc(m.method.sanity));
+
+  var chip = function (s) {
+    if (s === "na") { return '<span class="chip na">Not applicable</span>'; }
+    if (s === "open") { return '<span class="chip open">Boundary open</span>'; }
+    if (s === "unc") { return '<span class="chip open">Applicability unconfirmed</span>'; }
+    if (s === "part") { return '<span class="chip">Partly earned</span>'; }
+    return '<span class="chip">Unclaimed</span>';
+  };
+  setHTML("starsTable", tbl([8, 19, 8, 33, 32],
+    '<tr><th class="c">Credit</th><th>Title</th><th class="c">Points</th><th>What it needs</th><th>Where OC stands</th></tr>',
+    m.stars.map(function (s) {
+      return "<tr>" +
+        '<td class="strong nw c">' + esc(s.credit) + "</td>" +
+        '<td class="prose strong2">' + esc(s.title) + "</td>" +
+        '<td class="c nw strong">' + esc(s.pts) + "</td>" +
+        '<td class="prose">' + esc(s.needs) + "</td>" +
+        '<td class="prose">' + esc(s.stands) + '<div style="margin-top:7px">' + chip(s.state) + "</div></td></tr>";
+    }).join(""), OC_PLAN.starsCaption, "t-top"));
+
+  setHTML("tagTable", tbl([14, 86],
+    "<tr><th>Tag</th><th>Meaning</th></tr>",
+    m.tagLegend.map(function (t) {
+      return '<tr><td class="strong nw c">' + esc(t[0]) + '</td><td class="prose">' + esc(t[1]) + "</td></tr>";
+    }).join(""), "", "t-top"));
+};
+
+var renderTargets = function (m) {
+  var card = function (t) {
+    return '<div class="tcard"><span class="tag">' + esc(t.tag) + "</span>" +
+      '<p class="stmt">' + esc(t.stmt) + "</p>" +
+      '<p class="base">' + t.base + "</p>" +
+      '<p class="base" style="border-top:0;padding-top:8px"><b>Why this one.</b> ' + esc(t.why) + "</p></div>";
+  };
+  setHTML("targets", card(m.target.outcome) + card(m.target.lever));
+};
+
+var renderTiers = function (plan) {
+  var t = plan.tierOptions;
+  setHTML("tierFrame", esc(plan.tierFrame));
+  var head = '<tr><th class="tier-h" style="border-bottom:2px solid var(--line)"></th>' +
+    t.map(function (o) {
+      var rec = (o.name === "Recommended");
+      return '<th class="tier-h' + (rec ? " recd" : "") + '">' +
+        '<span class="tno">' + esc(o.pct) + "</span>" +
+        '<span class="tname">' + esc(o.name) + "</span>" +
+        '<span class="tsub">' + esc(o.sub) + "</span></th>";
+    }).join("") + "</tr>";
+  var body = plan.tierRows.map(function (rd) {
+    return '<tr><td class="tier-lbl">' + esc(rd[0]) + "</td>" + t.map(function (o) {
+      var v = o[rd[1]];
+      if (Object.prototype.toString.call(v) === "[object Array]") {
+        v = "<ul><li>" + v.map(function (x) { return esc(x); }).join("</li><li>") + "</li></ul>";
+      } else { v = esc(v); }
+      return '<td class="tier-c' + (o.name === "Recommended" ? " recd" : "") + '">' + v + "</td>";
+    }).join("") + "</tr>";
+  }).join("");
+  setHTML("tierTable", tbl([17, 27.6, 27.8, 27.6], head, body, plan.tierCaption));
+};
+
+var renderYears = function (fw, m) {
+  setHTML("ytabs", fw.years.map(function (y, i) {
+    return '<button type="button" class="ytab' + (i === 0 ? " on" : "") + '" data-y="' + y.id + '">' +
+      y.id + " &middot; " + esc(y.fy) + (y.submits ? '<span class="st"></span>' : "") + "</button>";
+  }).join(""));
+
+  setHTML("ypanels", fw.years.map(function (y, i) {
+    var d = m.years[y.id];
+    var acts = d.activities.map(function (a) {
+      var tg = m.tags[a[0]] || ["", ""];
+      var lbl = (tg[0] ? tg[0] + " · " : "") + tg[1];
+      return '<tr><td class="strong nw c">' + esc(a[0]) + "</td>" +
+        '<td class="prose">' + esc(a[1]) + "</td>" +
+        '<td class="c nw">' + (tg[1] ? '<span class="cchip ' + tg[1].toLowerCase() + '">' + esc(lbl) + "</span>" : "") + "</td></tr>";
+    }).join("");
+    return '<div class="ypanel' + (i === 0 ? " on" : "") + '" data-y="' + y.id + '">' +
+      '<div class="yhead"><span class="yt">' + esc(d.theme) + "</span>" +
+      '<span class="ym">' + esc(y.span) + " &middot; " + esc(y.period) + "</span></div>" +
+      '<p class="ym" style="font-size:13px;color:var(--ink-3);margin:10px 0 0">' + esc(y.milestone) + "</p>" +
+      '<p class="youtcome"><b>What is true by the end of the year.</b> ' + esc(d.outcome) + "</p>" +
+      '<div class="tw">' + tbl([8, 76, 16],
+        '<tr><th class="c">ID</th><th>Activity</th><th class="c">Carbon</th></tr>', acts,
+        d.activities.length + " activities. Full wording, the accountable position and the timing band live in the detailed plan.") +
+      "</div></div>";
+  }).join(""));
+};
+
+var renderAsks = function (m) {
+  setHTML("asksList", m.asks.map(function (a) {
+    return '<div class="ask"><div><h4>' + esc(a[0]) + "</h4><p>" + esc(a[1]) + "</p></div></div>";
+  }).join(""));
+};
+
+var renderOpen = function (m) {
+  setHTML("openTable", tbl([26, 42, 22, 10],
+    '<tr><th>Question</th><th>Why it matters</th><th>Ask</th><th class="c">Due</th></tr>',
+    m.openQuestions.map(function (q) {
+      return '<tr><td class="strong prose">' + esc(q[0]) + "</td>" +
+        '<td class="prose">' + esc(q[1]) + "</td>" +
+        '<td class="prose">' + esc(q[2]) + "</td>" +
+        '<td class="c strong nw">' + esc(q[3]) + "</td></tr>";
+    }).join(""), "", "t-top"));
+};
+
+var renderFoot = function (m) {
+  setHTML("footNote", "<b>Method.</b> " + esc(m.footNote) + " " + esc(m.asksNote));
+};
+
+var selectYear = function (id) {
+  var i, tabs = document.querySelectorAll(".ytab"), panels = document.querySelectorAll(".ypanel");
+  for (i = 0; i < tabs.length; i += 1) {
+    if (tabs[i].getAttribute("data-y") === id) { tabs[i].classList.add("on"); }
+    else { tabs[i].classList.remove("on"); }
+  }
+  for (i = 0; i < panels.length; i += 1) {
+    if (panels[i].getAttribute("data-y") === id) { panels[i].classList.add("on"); }
+    else { panels[i].classList.remove("on"); }
+  }
+};
+
+var wireYears = function () {
+  var tabs = document.querySelectorAll(".ytab"), i;
+  for (i = 0; i < tabs.length; i += 1) {
+    tabs[i].addEventListener("click", function (e) {
+      selectYear(e.currentTarget.getAttribute("data-y"));
+    });
+  }
+};
+
+var wireTheme = function () {
+  var btn = el("themeBtn"), root = document.documentElement;
+  var sysDark = function () { return window.matchMedia("(prefers-color-scheme: dark)").matches; };
+  var label = function () {
+    var d = root.getAttribute("data-theme");
+    btn.textContent = (d ? d === "dark" : sysDark()) ? "Light" : "Dark";
+  };
+  try { var s = localStorage.getItem("oc-tx-theme"); if (s) { root.setAttribute("data-theme", s); } } catch (e) {}
+  label();
+  btn.addEventListener("click", function () {
+    var cur = root.getAttribute("data-theme");
+    var next = (cur ? cur === "dark" : sysDark()) ? "light" : "dark";
+    root.setAttribute("data-theme", next); label();
+    try { localStorage.setItem("oc-tx-theme", next); } catch (e) {}
+  });
+  try { window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", label); } catch (e) {}
+};
+
+(function () {
+  var fw = OC_PLAN.framework, m = OC_PLAN.modules[0];
+  renderFigures(m); renderRail(OC_PLAN.rail); renderLocator(fw, m);
+  renderSituation(m); renderCase(m); renderTargets(m);
+  renderTiers(OC_PLAN); renderYears(fw, m); renderAsks(m);
+  renderOpen(m); renderFoot(m); wireYears(); wireTheme();
+}());
+
+</script>
+
+<style>
+/* ---------- collapsible sections (added, presentation only) ---------- */
+.sec-toggle {
+  display: flex; align-items: flex-start; gap: 12px;
+  width: 100%; margin: 0; padding: 0;
+  background: none; border: 0; font: inherit; color: inherit;
+  text-align: left; cursor: pointer; -webkit-appearance: none; appearance: none;
+}
+.sec-toggle:hover h2, .sec-toggle:hover .loc-kicker { color: var(--accent); }
+.sec-toggle:focus-visible { outline: 2px solid var(--accent); outline-offset: 6px; border-radius: 4px; }
+.sec-chev {
+  flex: 0 0 auto; width: 22px; height: 22px; margin-top: 5px;
+  border: 1px solid var(--line); border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  color: var(--ink-3);
+  transition: transform .18s ease, color .18s ease, border-color .18s ease;
+}
+.sec-chev svg { width: 10px; height: 10px; display: block; }
+.sec-toggle:hover .sec-chev { color: var(--accent); border-color: var(--accent); }
+.sec-toggle[aria-expanded="true"] .sec-chev { transform: rotate(90deg); }
+.sec-body[hidden] { display: none; }
+.sec-collapsed { padding-top: 26px; padding-bottom: 26px; }
+
+/* the locator heading reads as a section heading like every other one */
+.sec-toggle > .loc-kicker {
+  font-size: clamp(22px, 2.4vw, 29px); font-weight: 600; letter-spacing: -.01em;
+  text-transform: none; color: var(--ink); margin: 0 0 6px;
+}
+#locator .sec-body { margin-top: 14px; }
+#locator.sec-collapsed { background: transparent; }
+
+/* expand all / collapse all, beside the theme button */
+.mast-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+
+/* back to top */
+.to-top {
+  position: fixed; right: 24px; bottom: 24px; z-index: 60;
+  width: 46px; height: 46px; padding: 0; border-radius: 999px;
+  background: var(--bg); color: var(--ink-2);
+  border: 1px solid var(--line); box-shadow: var(--shadow);
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease, transform .2s ease,
+              color .2s ease, border-color .2s ease;
+}
+.to-top.on { opacity: 1; visibility: visible; }
+.to-top:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+.to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.to-top svg { width: 15px; height: 15px; display: block; }
+@media (max-width: 620px) { .to-top { right: 14px; bottom: 14px; } }
+
+@media print {
+  .sec-body[hidden] { display: block !important; }
+  .sec-chev, .to-top, .mast-actions { display: none !important; }
+  .sec-collapsed { padding-top: 52px; padding-bottom: 52px; }
+  #locator.sec-collapsed { background: var(--surface); }
+}
+</style>
+<script>
+/* Collapsible sections, expand/collapse all, and back to top.
+   Purely presentational: the content is already rendered by the script above,
+   so this only wraps, hides and reveals it. No content is altered. */
+(function () {
+  var KEEP_OPEN = { figures: 1 };
+  var CHEV = '<svg viewBox="0 0 10 10" aria-hidden="true" focusable="false">'
+    + '<path d="M3 1l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7"'
+    + ' stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ARROW = '<svg viewBox="0 0 12 12" aria-hidden="true" focusable="false">'
+    + '<path d="M6 10.5V2M2 5.5L6 1.5l4 4" fill="none" stroke="currentColor"'
+    + ' stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  var panels = [];
+
+  /* ---- 1. make every section collapsible ---- */
+  var secs = document.querySelectorAll("body > section[id]");
+  Array.prototype.forEach.call(secs, function (sec) {
+    var wrap = sec.firstElementChild;
+    if (!wrap || String(wrap.className).indexOf("wrap") < 0) return;
+
+    var head = wrap.querySelector("h2") || wrap.querySelector(".loc-kicker");
+    if (!head || head.parentNode !== wrap) return;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "sec-toggle";
+    var chev = document.createElement("span");
+    chev.className = "sec-chev";
+    chev.innerHTML = CHEV;
+
+    wrap.insertBefore(btn, head);
+    btn.appendChild(chev);
+    btn.appendChild(head);
+
+    var body = document.createElement("div");
+    body.className = "sec-body";
+    body.id = "secbody-" + sec.id;
+    while (btn.nextSibling) body.appendChild(btn.nextSibling);
+    wrap.appendChild(body);
+    btn.setAttribute("aria-controls", body.id);
+
+    var open = !!KEEP_OPEN[sec.id];
+    function apply(o, quiet) {
+      open = o;
+      btn.setAttribute("aria-expanded", o ? "true" : "false");
+      body.hidden = !o;
+      if (o) { sec.classList.remove("sec-collapsed"); }
+      else { sec.classList.add("sec-collapsed"); }
+      if (o && !quiet) { try { window.dispatchEvent(new Event("resize")); } catch (e) {} }
+    }
+    apply(open, true);
+    panels.push({ set: apply, isOpen: function () { return open; } });
+
+    btn.addEventListener("click", function () { apply(!open); });
+  });
+
+  function setAll(o) {
+    panels.forEach(function (p) { p.set(o, true); });
+    if (o) { try { window.dispatchEvent(new Event("resize")); } catch (e) {} }
+  }
+
+  /* ---- 2. expand all / collapse all, beside Theme ---- */
+  var mastTop = document.querySelector(".mast-top");
+  var themeBtn = document.getElementById("themeBtn");
+  if (mastTop) {
+    var actions = document.createElement("div");
+    actions.className = "mast-actions";
+
+    var expandBtn = document.createElement("button");
+    expandBtn.type = "button";
+    expandBtn.className = "btn";
+    expandBtn.textContent = "Expand all";
+
+    var collapseBtn = document.createElement("button");
+    collapseBtn.type = "button";
+    collapseBtn.className = "btn";
+    collapseBtn.textContent = "Collapse all";
+
+    actions.appendChild(expandBtn);
+    actions.appendChild(collapseBtn);
+    if (themeBtn) { actions.appendChild(themeBtn); }   /* keeps its existing handler */
+    mastTop.appendChild(actions);
+
+    expandBtn.addEventListener("click", function () { setAll(true); });
+    collapseBtn.addEventListener("click", function () {
+      setAll(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* ---- 3. back to top ---- */
+  var top = document.createElement("button");
+  top.type = "button";
+  top.className = "to-top";
+  top.setAttribute("aria-label", "Back to top");
+  top.title = "Back to top";
+  top.innerHTML = ARROW;
+  document.body.appendChild(top);
+  top.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  function toggleTop() {
+    if (window.pageYOffset > 320) { top.classList.add("on"); }
+    else { top.classList.remove("on"); }
+  }
+  window.addEventListener("scroll", toggleTop, { passive: true });
+  toggleTop();
+}());
+</script>
+</body>

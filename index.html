@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -2093,6 +2093,18 @@ var wireTheme = function () {
   }
   window.addEventListener("scroll", toggleTop, { passive: true });
   toggleTop();
+}());
+</script>
+
+<script>
+/* Always open in the light (white) theme, whatever the OS setting or any
+   previously stored choice. The Theme button still switches within the session. */
+(function () {
+  var root = document.documentElement;
+  root.setAttribute("data-theme", "light");
+  try { localStorage.removeItem("oc-tx-theme"); } catch (e) {}
+  var tb = document.getElementById("themeBtn");
+  if (tb) { tb.textContent = "Dark"; }
 }());
 </script>
 </body>
